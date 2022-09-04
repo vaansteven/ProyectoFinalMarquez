@@ -1,3 +1,10 @@
+const eventos= document.querySelectorall(".cards");
+cards.forEach(element => {
+    element.addEventListner('click', (e)=>{
+      console.log('someone hit me');
+    });
+ });
+
 const evento1 = document.querySelector("#evento1");
 const evento2 = document.querySelector("#evento2");
 const evento3 = document.querySelector("#evento3");
@@ -6,7 +13,7 @@ const evento3 = document.querySelector("#evento3");
     element.addEventListner('click', (e)=>{
       console.log('click');
    });
-});
+});s
 
 
 function reservar(e) {
