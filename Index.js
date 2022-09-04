@@ -1,4 +1,4 @@
-const eventos= document.querySelectorall(".cards");
+const eventos= document.querySelectorAll(".cards");
 cards.forEach(element => {
     element.addEventListner('click', (e)=>{
       console.log('cards');
