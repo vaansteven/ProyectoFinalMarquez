@@ -1,7 +1,7 @@
 const eventos= document.querySelectorall(".cards");
 cards.forEach(element => {
     element.addEventListner('click', (e)=>{
-      console.log('someone hit me');
+      console.log('cards');
     });
  });
 
