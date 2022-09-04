@@ -1,7 +1,7 @@
 const eventos= document.querySelectorAll(".cards");
-cards.forEach(element => {
+eventos.forEach(element => {
     element.addEventListner('click', (e)=>{
-      console.log('cards');
+      console.log('eventos');
     });
  });
 
