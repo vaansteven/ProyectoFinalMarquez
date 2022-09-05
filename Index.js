@@ -1,28 +1,68 @@
-const eventos= document.querySelectorAll(".cards");
-eventos.forEach(element => {
-    element.addEventListner('click', (e)=>{
-      console.log('eventos');
+const eventos= document.querySelectorAll(".reservados");
+    eventos.addEventListner('click', (e)=>{
+      console.log("evento reservado");
     });
- });
 
-const evento1 = document.querySelector("#evento1");
-const evento2 = document.querySelector("#evento2");
-const evento3 = document.querySelector("#evento3");
+
+const evento1 = document.querySelector("#Afrojack");
+const evento2 = document.querySelector("#Claptone");
+const evento3 = document.querySelector("#SHM");
 
 [evento1, evento2, evento3].forEach((element)=>{
     element.addEventListner('click', (e)=>{
-      console.log('click');
+      console.log(element.target.id);
    });
-});s
+});
 
 
 function reservar(e) {
-    let reservado=e.target
+    let reservado=e.target.
     console.log(e)
 
 }
 
 /*
+1- Agregargarle una clase a todos los anchor (a elements) que dicen reservar
+2- Query selector all para esa clase
+3- console log el event.target.id y ver que concuerde con lo que vos queres
+4- Recorrer la lista que te retorno el query selector all con un foreach
+5- A cada uno agregarle un evento con addEventListener, agregale el click
+
+const descripcionesEventos = new Map();
+descripcionesEventos.set('afrojack', "Afrojack en OVO Punta del Este");
+descripcionesEventos.set('shm', "Swedish House Mafia Estadio Centenario");
+descripcionesEventos.set('claptone', "Claptone en Corona Sunsets de Punta del Este");
+
+
+
+document.querySelectorAll('.reservar').forEach(item => {
+
+  item.addEventListener('click', event => {
+    const idEvento = event.target.id;
+    const descripcionEvento = descripcionesEventos.get(idEvento)
+
+
+    let yaReservadas = localStorage.getItem(idEvento)? localStorage.getItem(idEvento) : 0;
+    localStorage.setItem(idEvento, ++yaReservadas);
+
+
+    Swal.fire(
+      'Felicitaciones!',
+      `Reservaste entradas para ${descripcionEvento}`,
+      'success'
+    )
+    
+  })
+})
+ carrito js
+
+
+Object.keys(localStorage).forEach(key=>{
+
+document.getElementById("entradas").innerHTML += `<p> ${descripcionesEventos.get(key)} - $ ${localStorage.getItem(key) * precioEntradas.get(key)} </p>`
+
+})
+[20:27, 4/9/2022] Gabriel Marquez: Para carrito tenes que hacer los dos mapas uno con descripciones y otro con precios
 mi intenciòn es que  cuando el usuario de click en la palabra reservar la consola muestre una intracción
 se abra un modal para que indique cantidad de entradas que desea comprar
 una vez que realice la compra le indique el total.*/
