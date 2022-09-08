@@ -1,25 +1,37 @@
-const eventos= document.querySelectorAll(".reservados");
-    eventos.addEventListner('click', (e)=>{
-      console.log("evento reservado");
-    });
 
-
-const evento1 = document.querySelector("#Afrojack");
-const evento2 = document.querySelector("#Claptone");
-const evento3 = document.querySelector("#SHM");
-
-[evento1, evento2, evento3].forEach((element)=>{
-    element.addEventListner('click', (e)=>{
-      console.log(element.target.id);
+document.querySelectorAll('.reservados').forEach((evento)=>{
+    evento.addEventListener('click', e =>{
+      console.log(e.target.id);
    });
 });
+const descripcionesEventos = new Map();
+descripcionesEventos.set('afrojack', "Afrojack en OVO Punta del Este");
+descripcionesEventos.set('shm', "Swedish House Mafia Estadio Centenario");
+descripcionesEventos.set('claptone', "Claptone en Corona Sunsets de Punta del Este");
 
 
-function reservar(e) {
-    let reservado=e.target.
-    console.log(e)
 
-}
+
+document.querySelectorAll('.reservados').forEach(item => {
+    item.addEventListener('click', event => {
+    const idEvento = event.target.id;
+    const descripcionEvento = descripcionesEventos.get(idEvento)
+
+
+    let yaReservadas = localStorage.getItem(idEvento)? localStorage.getItem(idEvento) : 0;
+    localStorage.setItem(idEvento, ++yaReservadas);
+
+
+    Swal.fire(
+      'Felicitaciones!',
+      `Reservaste entradas para ${descripcionEvento}`,
+      'success'
+    )
+    
+  })
+})
+
+
 
 /*
 1- Agregargarle una clase a todos los anchor (a elements) que dicen reservar
