@@ -1,98 +1,80 @@
-
-document.querySelectorAll('.reservados').forEach((evento)=>{
-    evento.addEventListener('click', e =>{
-      console.log(e.target.id);
-   });
+document.querySelectorAll(".reservados").forEach((evento) => {
+  evento.addEventListener("click", (e) => {
+    console.log(e.target.id);
+  });
 });
 const descripcionesEventos = new Map();
-descripcionesEventos.set('afrojack', "Afrojack en OVO Punta del Este");
-descripcionesEventos.set('shm', "Swedish House Mafia Estadio Centenario");
-descripcionesEventos.set('claptone', "Claptone en Corona Sunsets de Punta del Este");
+descripcionesEventos.set("afrojack", "Afrojack en OVO Punta del Este");
+descripcionesEventos.set("shm", "Swedish House Mafia Estadio Centenario");
+descripcionesEventos.set(
+  "claptone",
+  "Claptone en Corona Sunsets de Punta del Este"
+);
 
-
-
-
-document.querySelectorAll('.reservados').forEach(item => {
-    item.addEventListener('click', event => {
+document.querySelectorAll(".reservados").forEach((item) => {
+  item.addEventListener("click", (event) => {
     const idEvento = event.target.id;
-    const descripcionEvento = descripcionesEventos.get(idEvento)
+    const descripcionEvento = descripcionesEventos.get(idEvento);
 
-
-    let yaReservadas = localStorage.getItem(idEvento)? localStorage.getItem(idEvento) : 0;
+    let yaReservadas = localStorage.getItem(idEvento)
+      ? localStorage.getItem(idEvento)
+      : 0;
     localStorage.setItem(idEvento, ++yaReservadas);
 
-
     Swal.fire(
-      'Felicitaciones!',
+      "Felicitaciones!",
       `Reservaste entradas para ${descripcionEvento}`,
-      'success'
-    )
-    
-  })
-})
-document.querySelectorAll('.ampliar').forEach((eventoPasado)=>{
-  idEventoPasado.addEventListener('click', e =>{
-    console.log(e.target.id);
- });
+      "success"
+    );
+  });
 });
+
+document.querySelectorAll(".ampliar").forEach((eventoPasado) => {
+  eventoPasado.addEventListener("click", (e) => {
+    console.log(e.target.id);
+  });
+});
+
 const descripcionesEventosPasados = new Map();
-descripcionesEventosPasados.set('resistance', "Afrojack en OVO Punta del Este");
-descripcionesEventosPasados.set('galantis', "Swedish House Mafia Estadio Centenario");
-descripcionesEventosPasados.set('carlcox', "Claptone en Corona Sunsets de Punta del Este");
+descripcionesEventosPasados.set("resistance", {
+  img:"https://uruguay.resistancemusic.com/wp-content/uploads/sites/18/2019/08/uruguay-og.jpg",
+  descripcion: "Resistance 2018 Velodromo"
+});
+descripcionesEventosPasados.set("galantis",{
+  img:"https://edmidentity.com/wp-content/uploads/2017/11/59c8be4b78d19946401803.png.jpeg",
+  descripcion: "Galantis Velodromo"});
 
-document.querySelectorAll('.ampliar').forEach(item => {
-  item.addEventListener('click', event => {
-  const idEventoPasado = event.target.id;
-  const descripcionesEventosPasados = descripcionesEventosPasados.get(idEvento)
+descripcionesEventosPasados.set("carlcox",{
+  img: "https://sc2.elpais.com.uy/files/article_main/uploads/2018/10/11/5bbf6579f3f17.jpeg",
+  descripcion:"Carlcox Resistance 2019"});
 
+document.querySelectorAll(".ampliar").forEach(item => {
 
-  let ampliadas = localStorage.getItem(idEvento)? localStorage.getItem(idEvento) : 0;
-  localStorage.setItem(idEvento, ++ampliadas);
+  item.addEventListener("click", (event) => {
+    const idEventoPasado = event.target.id;
+    const infoEvento =
+      descripcionesEventosPasados.get(idEventoPasado);
 
-  Swal.fire({
-    title: 'Sweet!',
-    text: 'Modal with a custom image.',
-    imageUrl: 'https://unsplash.it/400/200',
-    imageWidth: 400,
-    imageHeight: 200,
-    imageAlt: 'Custom image',
-  })
+    let ampliadas = localStorage.getItem(idEventoPasado)
+      ? localStorage.getItem(idEventoPasado)
+      : 0;
+    localStorage.setItem(idEventoPasado, ++ampliadas);
 
+    Swal.fire({
+      title: idEventoPasado,
+      text: infoEvento.descripcion,
+      imageUrl: infoEvento.img,
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: "Custom image",
+    });
+
+  });
+
+});
 
 /*
-1- Agregargarle una clase a todos los anchor (a elements) que dicen reservar
-2- Query selector all para esa clase
-3- console log el event.target.id y ver que concuerde con lo que vos queres
-4- Recorrer la lista que te retorno el query selector all con un foreach
-5- A cada uno agregarle un evento con addEventListener, agregale el click
-
-const descripcionesEventos = new Map();
-descripcionesEventos.set('afrojack', "Afrojack en OVO Punta del Este");
-descripcionesEventos.set('shm', "Swedish House Mafia Estadio Centenario");
-descripcionesEventos.set('claptone', "Claptone en Corona Sunsets de Punta del Este");
-
-
-
-document.querySelectorAll('.reservar').forEach(item => {
-
-  item.addEventListener('click', event => {
-    const idEvento = event.target.id;
-    const descripcionEvento = descripcionesEventos.get(idEvento)
-
-
-    let yaReservadas = localStorage.getItem(idEvento)? localStorage.getItem(idEvento) : 0;
-    localStorage.setItem(idEvento, ++yaReservadas);
-
-
-    Swal.fire(
-      'Felicitaciones!',
-      `Reservaste entradas para ${descripcionEvento}`,
-      'success'
-    )
-    
-  })
-})
- carrito js
+carrito js
 
 
 Object.keys(localStorage).forEach(key=>{
@@ -117,7 +99,7 @@ const precioEntradas = new Map();
 precioEntradas.set('evento1', 200);
 precioEntradas.set('evento2', 400);
 precioEntradas.set('evento3', 600);
-precioEntradas.set('evento4', 800);
+
 
 
 cantidad.addEventListener("keypress", (event) => {
