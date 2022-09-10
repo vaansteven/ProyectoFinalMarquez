@@ -27,6 +27,20 @@ html {
     margin-bottom: 20px;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   }
+  .carrito{
+    width: 35px;  
+    height: 35px;
+    margin-right: 10px;
+    float: right;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  .carrito:hover{
+    transform: translateY(-5px);
+    transition: all 0.25s;
+  }
+  
   .p {
     text-align: justify;
     font-family: "PT Sans Narrow", sans-serif;

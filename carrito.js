@@ -23,4 +23,4 @@ cantidad.addEventListener("click", (event) => {
   
       resultado.innerHTML = `$ ${total}`;
     }
-}
+})

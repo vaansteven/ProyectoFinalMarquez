@@ -4,12 +4,9 @@ document.querySelectorAll(".reservados").forEach((evento) => {
   });
 });
 const descripcionesEventos = new Map();
-descripcionesEventos.set("afrojack", "Afrojack en OVO Punta del Este");
-descripcionesEventos.set("shm", "Swedish House Mafia Estadio Centenario");
-descripcionesEventos.set(
-  "claptone",
-  "Claptone en Corona Sunsets de Punta del Este"
-);
+descripcionesEventos.set("afrojack", "Afrojack en OVO Punta del Este 5/11/2022");
+descripcionesEventos.set("shm", "Swedish House Mafia Estadio Centenario 15/10/2022");
+descripcionesEventos.set ("claptone", " Corona Sunsets de Punta del Este 31/12/2022");
 
 document.querySelectorAll(".reservados").forEach((item) => {
   item.addEventListener("click", (event) => {
@@ -72,46 +69,3 @@ document.querySelectorAll(".ampliar").forEach(item => {
   });
 
 });
-
-/*
-carrito js
-
-
-Object.keys(localStorage).forEach(key=>{
-
-document.getElementById("entradas").innerHTML += `<p> ${descripcionesEventos.get(key)} - $ ${localStorage.getItem(key) * precioEntradas.get(key)} </p>`
-
-})
-[20:27, 4/9/2022] Gabriel Marquez: Para carrito tenes que hacer los dos mapas uno con descripciones y otro con precios
-mi intenciòn es que  cuando el usuario de click en la palabra reservar la consola muestre una intracción
-se abra un modal para que indique cantidad de entradas que desea comprar
-una vez que realice la compra le indique el total.
-
-
-
-
-
-let selectedEvent;
-let cantidad = document.getElementById("evento1","evento2","evento3");
-
-
-const precioEntradas = new Map();
-precioEntradas.set('evento1', 200);
-precioEntradas.set('evento2', 400);
-precioEntradas.set('evento3', 600);
-
-
-
-cantidad.addEventListener("keypress", (event) => {
-  if (event.key == "Enter") {
-    let total = 0;
-    
-
-    total = precioEntradas.get(selectedEvent) == undefined? 0: precioEntradas.get(selectedEvent)  * parseInt(cantidad.value);
-
-    let resultado = document.getElementById("resultado");
-
-    resultado.innerHTML = `$ ${total}`;
-  }
-
-*/
