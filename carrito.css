@@ -1,0 +1,71 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+    
+
+  .titulo {
+    font-size: 2.8rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #eef1eb;
+    text-align: center;
+    background-color: black;
+    padding: 7px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  h2, h3{
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  h3{
+    font-size: 2.5rem;
+
+    font-weight: bolder;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+  }
+
+  .home{
+    width: 35px;  
+    height: 35px;
+    margin-right: 10px;
+    float: right;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  .home:hover{
+    transform: translateY(-5px);
+    transition: all 0.25s;
+  }
+
+  .container {
+    width: auto;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+  }
+  .container .card {
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+  }
