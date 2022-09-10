@@ -26,13 +26,23 @@ html {
     margin-top: 30px;
     margin-bottom: 20px;
     cursor: pointer;
+    display:flex;
+    flex-direction: column;
   }
 
   h3{
     font-size: 2.5rem;
-
     font-weight: bolder;
+    text-decoration:underline;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    text-align:right;
+    
+  }
+  h4{
+    text-align:right;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 
   }
 
@@ -52,20 +62,16 @@ html {
 
   .container {
     width: auto;
-    max-width: 1200px;
+    max-width: 1000px;
     height: auto;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-  }
-  .container .card {
-    width: 330px;
-    height: 430px;
     border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 20px;
     text-align: center;
-    transition: all 0.25s;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    padding-right: 25px;
   }
+  
