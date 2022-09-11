@@ -95,48 +95,4 @@ html {
     padding-top: 1.5rem;
     font-weight: 800;
   }
-  .main{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 10px;
-    row-gap: 20px;
-    width: 85%;
-    margin: 0px auto 20px;
-  }
   
-  .product{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid  rgb(136, 136, 136, 0.4);
-    box-shadow: 3px 5px rgb(136, 136, 136, 0.3);
-    border-radius: 10px;
-    padding: 5% 10%;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  .product .imagen{
-    margin: auto;
-  }
-  img{
-    width: 100%;
-  }
-  
-  .descripcion{
-    text-align: center;
-    width: 100%;
-  }
-  .descripcion h3{
-    font-size: 1rem;
-  }
-  .boton{
-    border: 1px solid rgb(57, 57, 57, 0.5);
-    border-radius: 10px;
-    padding: 10px 0;
-    font-size: .8rem;
-  }
-  .boton:hover{
-    background-color: rgb(96, 157, 136, 0.5);
-  
-  }  
