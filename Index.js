@@ -52,13 +52,9 @@ document.querySelectorAll(".ampliar").forEach(item => {
     const infoEvento =
       descripcionesEventosPasados.get(idEventoPasado);
 
-    let ampliadas = localStorage.getItem(idEventoPasado)
-      ? localStorage.getItem(idEventoPasado)
-      : 0;
-    localStorage.setItem(idEventoPasado, ++ampliadas);
-
+  
     Swal.fire({
-      title: idEventoPasado,
+      title: idEventoPasado.charAt(0).toUpperCase() + idEventoPasado.slice(1, idEventoPasado.length),
       text: infoEvento.descripcion,
       imageUrl: infoEvento.img,
       imageWidth: 400,
