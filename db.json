@@ -1,0 +1,57 @@
+{"eventos": [
+    {
+      "id": 1,
+      "nombre": "Tiesto",
+      "precio": 2000,
+      "stock": 9500,
+      "descripcion":"La leyenda Tiesto se presentará en OVO este 24/12/2022. Festejará por primera vez navidad en Uruguay junto a su sello discografico Musical Freedom.",
+      "img":"https://ibb.co/8Bn3N8D"
+    },
+    {
+      "id": 2,
+      "nombre": "Deadmaus",
+      "precio": 1500,
+      "stock": 2800,
+      "descripcion":"Se presentara en el Antel Arena. Este 21/9/2022. El dj canadiense plantea recorrer toda Latinoamérica. Su gira comenzara en Uruguay hasta llegar a Mexico. Se estiman que más de 700.000 personas veran esta gira, ",
+      "img": "https://ibb.co/QnqZ1KC"
+    },
+    {
+      "id": 3,
+      "nombre": "Nora en Pure",
+      "precio": 1000,
+      "stock": 3500,
+      "descripcion":"Se presentará en el PESF Punta del Este Summer Festival el próximo 7/1/2023.Cada año este festival tiene una concurrencia mayor y se esperan 15000 personas.",
+      "img": "https://ibb.co/zZQkwZw"
+    },
+    {
+        "id": 4,
+        "nombre": "Creamfields",
+        "precio": 800,
+        "stock": 3000,
+        "descripcion":"El festival de la reconocida discoteca Cream tendrá su quinta edición este 12/11/2022. Las presentaciones de Jamie Jones,Boris Brejcha y MNKYBSNSS son las destacadas de esta edición.",
+        "img": "https://ibb.co/xh6SkJ9"
+      },
+      {
+        "id": 5,
+        "nombre": "Fernando Picon",
+        "precio": 500,
+        "stock": 400,
+        "descripcion":"Este 15/10/2022 en Parque Rivera. Presentará su nuevo show Naturaleza junto a Alejandro Dangiollillo en un b2b imperdible.Con Santander tenes un 20% off.",
+        "img": "https://ibb.co/MM9z5YB"
+      },
+      {
+        "id": 6,
+        "nombre": "The Martinez Brothers",
+        "precio": 600,
+        "stock": 300,
+        "descripcion":"Los boricuas llegan al Campo de golf de Punta Carretas en una exclusiva fiesta Miller Time. El Bastardo y Alana Ley se encargaran de hacer el warm up. No puedes perderte este evento 5/11/2022.",
+        "img": "https://ibb.co/kgb0dj1"
+      }
+  ]}
+
+
+  
+
+
+
+
